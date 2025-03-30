@@ -46,7 +46,7 @@ export default function OrderList() {
                 <td className="p-2">{order.id}</td>
                 <td className="p-2">{order.orderNumber}</td>
                 <td className="p-2">{order.customerId}</td>
-                <td className="p-2">{new Date(order.orderDate).toISOString().split('T')[0]}</td>
+                <td className="p-2">{order.orderDate.split('T')[0]}</td>
                 <td className="p-2 text-right">${parseFloat(order.totalAmount).toFixed(2)}</td>
                 <td className="p-2 text-center">
                   <Badge
