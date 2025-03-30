@@ -48,16 +48,20 @@ export default function OrderList() {
                 <td className="p-2">{order.customerId}</td>
                 <td className="p-2">{new Date(order.orderDate).toISOString().split('T')[0]}</td>
                 <td className="p-2 text-right">${parseFloat(order.totalAmount).toFixed(2)}</td>
-                <td className="p-2">
+                <td className="p-2 text-center">
                   <Badge
                     variant={
-                      order.status === "Completed"
+                      order.status === "Delivered"
                         ? "default"
                         : order.status === "Processing"
                           ? "secondary"
                           : order.status === "Shipped"
-                            ? "outline"
-                            : "destructive"
+                            ? "secondary"
+                            : order.status === "Pending"
+                              ? "outline"
+                              : order.status === "Cancelled"
+                                ? "destructive"
+                        : "default"
                     }
                   >
                     {order.status}
