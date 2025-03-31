@@ -38,7 +38,7 @@ export default function OrderDetails({ orderId }: { orderId: string }) {
             <dd>{order.customerId}</dd>
 
             <dt className="font-medium">Order Date:</dt>
-            <dd>{new order.orderDate.split('T')[0]}</dd>
+            <dd>{order.orderDate.split('T')[0]}</dd>
 
             <dt className="font-medium">Total Amount:</dt>
             <dd>${parseFloat(order.totalAmount).toFixed(2)}</dd>
