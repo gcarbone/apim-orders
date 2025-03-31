@@ -23,7 +23,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
     console.error('Error fetching orders:', error);
     throw error;
   }
-  console.log(res);
+  // console.log(res);
   // Mock order data based on ID
   /*const orderData: Record<string, any> = {
     "1": {

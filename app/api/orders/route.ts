@@ -22,7 +22,7 @@ export async function GET() {
     console.error('Error fetching orders:', error);
     throw error;
   }
-  console.log(res);
+  // console.log(res);
 
   /*const orders = [
     {

@@ -9,7 +9,11 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "OrderMaster",
   description: "Manage your orders with ease",
-    generator: 'v0.dev'
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+  },
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
