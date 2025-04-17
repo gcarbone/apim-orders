@@ -19,6 +19,9 @@ export default function Header() {
           <Link href="/orders" className="text-foreground hover:text-primary">
             Orders
           </Link>
+          <Link href="/products" className="text-foreground hover:text-primary">
+            Products
+          </Link>
         </nav>
         <div className="flex items-center space-x-2">
           <ThemeToggle />
@@ -41,6 +44,12 @@ export default function Header() {
                   <Link href="/orders" className="flex items-center">
                     <ShoppingCart className="mr-2 h-4 w-4" />
                     <span>Orders</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/products" className="flex items-center">
+                    <ShoppingCart className="mr-2 h-4 w-4" />
+                    <span>Products</span>
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>

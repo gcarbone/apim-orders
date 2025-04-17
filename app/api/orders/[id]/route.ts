@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server"
 
 export async function GET(request: Request, { params }: { params: { id: string } }) {
-  // Simulate API delay
-  await new Promise((resolve) => setTimeout(resolve, 1000))
-
+ 
+  console.log(params)
   const apikey = 'a45de33b-d092-4b85-aa79-c9b1e8283e6a';
 
   let res;

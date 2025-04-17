@@ -15,8 +15,8 @@ export default function OrderList() {
   if (error) return <div className="text-destructive">Failed to load orders</div>
   if (!orders) return <LoadingSpinner />
 
-  const handleRowClick = (orderId: string) => {
-    router.push(`/order/${orderId}`)
+  const handleRowClick = (orderNumber: string) => {
+    router.push(`/order/${orderNumber}`)
   }
 
   return (
@@ -41,7 +41,7 @@ export default function OrderList() {
               <tr
                 key={order.id}
                 className="border-b border-muted hover:bg-accent hover:text-accent-foreground cursor-pointer"
-                onClick={() => handleRowClick(order.id)}
+                onClick={() => handleRowClick(order.orderNumber)}
               >
                 <td className="p-2">{order.id}</td>
                 <td className="p-2">{order.orderNumber}</td>
@@ -73,7 +73,7 @@ export default function OrderList() {
                 <td className="p-2">{order.paymentMethod}</td>
                 <td className="p-2">
                   <Link
-                    href={`/order/${order.id}`}
+                    href={`/order/${order.orderNumber}`}
                     className="text-primary hover:underline"
                     onClick={(e) => e.stopPropagation()} // Prevent row click from triggering
                   >
