@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Home, ShoppingCart, Menu } from "lucide-react"
+import { Home, ShoppingCart, Menu, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { ThemeToggle } from "./ThemeToggle"
@@ -21,6 +21,9 @@ export default function Header() {
           </Link>
           <Link href="/products" className="text-foreground hover:text-primary">
             Products
+          </Link>
+          <Link href="/customers" className="text-foreground hover:text-primary">
+            Customers
           </Link>
         </nav>
         <div className="flex items-center space-x-2">
@@ -50,6 +53,12 @@ export default function Header() {
                   <Link href="/products" className="flex items-center">
                     <ShoppingCart className="mr-2 h-4 w-4" />
                     <span>Products</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/customers" className="flex items-center">
+                    <Users className="mr-2 h-4 w-4" />
+                    <span>Customers</span>
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
